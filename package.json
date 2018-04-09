@@ -1,0 +1,35 @@
+{
+  "name": "sheik",
+  "version": "1.0.0",
+  "main": "dist/sheik.bundle.js",
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "docs:dev": "webpack-dev-server --mode development --open --config config/webpack.docs.js",
+    "docs:build": "webpack --mode production --config config/webpack.docs.js",
+    "lib:build": "webpack --mode production --config config/webpack.dist.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint-config-blake": "^1.0.10",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "prop-types": "^15.6.1",
+    "raw-loader": "^0.5.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-live": "^1.10.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
