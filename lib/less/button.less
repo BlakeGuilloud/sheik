@@ -1,3 +1,59 @@
+@import 'variables';
+
+.mixin-variant(@background-color; @color;) {
+  background: @background-color;
+  color: @color;
+  border-color: darken(@background-color, 20%);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.is-active {
+    background-color: darken(@background-color, 10%);
+    color: @color;
+  }
+}
+
 .button {
-  color: blue;
+  margin: 5px;
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  font: inherit;
+  color: black;
+  font-weight: 400px;
+  font-size: 1rem;
+  background-color: transparent;
+  text-transform: none;
+  text-decoration: none;
+  text-align: left;
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  transition: color .20s ease-in-out, background-color .20s ease-in-out, border-color .20s ease-in-out;
+}
+
+.button--primary {
+  .mixin-variant(@color-primary; white);
+}
+
+.button--success {
+  .mixin-variant(@color-success; white);
+}
+
+.button--danger {
+  .mixin-variant(@color-danger; white);
+}
+
+.button--warning {
+  .mixin-variant(@color-warning; black);
+}
+
+.button--info {
+  .mixin-variant(@color-info; white);
 }

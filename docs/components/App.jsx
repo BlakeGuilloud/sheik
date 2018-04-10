@@ -1,28 +1,30 @@
 import React from 'react';
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview,
-} from 'react-live';
+// import {
+//   LiveProvider,
+//   LiveEditor,
+//   LiveError,
+//   LivePreview,
+// } from 'react-live';
 
-import { Alert, Button } from '../../lib';
-import avatarExample from './examples/Alert.example.txt';
+import { Button } from '../../lib';
+// import avatarExample from './examples/Alert.example.txt';
 
-const exampleScope = {
-  React,
-  Alert,
-};
+// const exampleScope = {
+//   React,
+//   Alert,
+// };
+
+const buttonTypes = ['Primary', 'Success', 'Danger', 'Warning', 'Info'];
 
 const App = () => (
   <div>
-    <Alert />
-    <Button />
-    <LiveProvider scope={exampleScope} code={avatarExample}>
+    {/* <Alert /> */}
+    {buttonTypes.map(type => <Button key={type} type={type.toLowerCase()}>{type}</Button>)}
+    {/* <LiveProvider scope={exampleScope} code={avatarExample}>
       <LiveEditor />
       <LiveError />
       <LivePreview />
-    </LiveProvider>
+    </LiveProvider> */}
   </div>
 );
 
